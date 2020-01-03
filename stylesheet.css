@@ -1,0 +1,154 @@
+body,
+        html {
+            height: 100%;
+            font-family: 'Raleway' !important;
+            scroll-behavior: smooth;
+        }
+        .navbar button {
+            background-color: rgb(255, 255, 255) !important;
+        }
+
+        .navbar button:hover {
+            background-color: rgb(255, 255, 255) !important;
+            border: 1px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+        }
+
+        .navbar button:focus {
+            background-color: rgb(255, 255, 255) !important;
+        }
+
+        .nav-item .nav-link:hover {
+            color: white !important;
+            margin-top: -1px;
+            border-bottom: 1px solid white
+        }
+
+        .active {
+            color: white !important;
+            margin-top: -1px;
+            border-bottom: 1px solid white;
+        }
+
+        #homeDividerLine {
+            animation: moveRight 1.5s 1 ease;
+        }
+
+        @keyframes moveRight {
+            0% {
+                width: 0%;
+            }
+
+            70% {
+                width: 100%;
+            }
+
+            100% {
+                width: 75%;
+            }
+        }
+
+        .contactBlock {
+            position: relative;
+            background: #dc3545;
+            width: 100%;
+            height: 400px;
+            margin-top: 200px;
+        }
+
+        .contactBlock::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0px;
+            background: #dc3545;
+            display: block;
+            width: 100%;
+            height: 50%;
+            transform: skewY(10deg);
+            z-index: -1;
+        }
+
+        .contactBlock::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            right: 0px;
+            background: #dc3545;
+            display: block;
+            width: 100%;
+            height: 50%;
+            transform: skewY(-10deg);
+            z-index: -1;
+        }
+
+        .contactBlock .row button:hover {
+            transition: background 0.5s ease-in-out;
+            background: white;
+        }
+
+        .contactBlock .row button a {
+            color: white;
+        }
+
+        .contactBlock .row button a:hover {
+            text-decoration: none;
+        }
+
+        .contactBlock .row button a:focus {
+            text-decoration: none;
+        }
+
+        .contactBlock .row button:hover .dangerOnhover {
+            color: #dc3545 !important;
+            transition: color 0.5s ease-in-out;
+        }
+
+        .footer {
+            background: white;
+            width: 100%;
+            height: 180px;
+        }
+
+        .iconBlock {
+            overflow: hidden;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: relative;
+            text-align: center;
+            margin: 5px 0px;
+            background: white;
+            font-size: 18pt;
+            box-shadow: .5px .5px 1px 2px rgb(235, 233, 233);
+        }
+
+        .iconBlock:hover {
+            transition: background 0.3s, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            background: #dc3545;
+            box-shadow: 0px 0px 0px 0px #dc3545;
+
+        }
+
+        .icons {
+            color: #dc3545;
+        }
+        .iconBlock:hover .icons {
+
+            animation: drop 0.3s forwards ease-in-out;
+            color: white;
+            text-decoration: none;
+        }
+
+        @keyframes drop {
+            from {
+                transform: translateY(-30px);
+            }
+
+            to {
+                transform: translateY(0px);
+            }
+        }
